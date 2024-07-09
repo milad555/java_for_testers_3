@@ -21,17 +21,4 @@ public record Triangle(double a, double b, double c) {
 
         System.out.println("Площадь треугольника = " +  String.format("%.2f",t.triangleArea()));
     }
-//
-//    public static double trianglePerimeter(double a, double b, double c){
-//        return a + b + c;
-//    }
-//
-//    public static void printTriangleArea(double a, double b, double c){
-//        System.out.println("Площадь треугольника: " + triangleArea(a,b,c));
-//    }
-//    public static double triangleArea(double a, double b, double c){
-//        double halfP = (a + b + c)/2;
-//        return  Math.sqrt(halfP * (halfP - a) * (halfP - b) * (halfP - c));
-//    }
-
 }
