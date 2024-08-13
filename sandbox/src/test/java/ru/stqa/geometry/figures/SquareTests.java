@@ -31,6 +31,7 @@ public class SquareTests {
         var s1 = new Square(5.0);
         var s2 = new Square(5.0);
         Assertions.assertEquals(s1,s2);
+
     }
 
     @Test

@@ -7,5 +7,6 @@ public class MathTests {
         var y = 0;
         int z = x / y;
         System.out.println(z);
+
     }
 }
