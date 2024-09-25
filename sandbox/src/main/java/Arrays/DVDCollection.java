@@ -160,20 +160,21 @@ public class DVDCollection {
 
     }
 
+    //Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears
+    //only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
     public int removeDuplicates(int[] nums) {
         int index = 1;
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] != nums[i + 1]) {
-                nums[index++] = nums[i + 1];
+                nums[index++] = nums[i+1];
             }
         }
         for (int num : nums) {
             System.out.println("num = " + num);
-
         }
         return index;
-
     }
+
 
     public boolean checkIfExist(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -201,18 +202,32 @@ public class DVDCollection {
 //            i++;
 //        }
 //        return i == arr.length - 1;
-        if (arr.length < 3){
-            return false;}
-        int i = 0;
-        while (i<arr.length-1 && arr[i]<arr[i+1]){
-            i++;
-        }
-        while(i==0 || i==arr.length-1){
+        if (arr.length < 3) {
             return false;
         }
-        while (i<arr.length-1 && arr[i]>arr[i+1]){
+        int i = 0;
+        while (i < arr.length - 1 && arr[i] < arr[i + 1]) {
             i++;
         }
-        return i==arr.length-1;
+        while (i == 0 || i == arr.length - 1) {
+            return false;
+        }
+        while (i < arr.length - 1 && arr[i] > arr[i + 1]) {
+            i++;
+        }
+        return i == arr.length - 1;
+    }
+
+    //  Replace Elements with Greatest Element on Right Side
+    public int[] replaceElements(int[] arr) {
+        int maxFromRight = -1;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            int current = arr[i];
+            arr[i] = maxFromRight;
+            if (current > maxFromRight) {
+                maxFromRight = current;
+            }
+        }
+        return arr;
     }
 }

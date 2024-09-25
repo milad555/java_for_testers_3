@@ -82,18 +82,21 @@ public class Main {
 
 
 //        // remove duplicates
-//        int[] nums= {0,0,1,1,1,2,2,3,3,4};
-//        //collection.removeDuplicates(nums);
-//        //System.out.println(collection.removeDuplicates(nums));
+        int[] nums= {0,0,1,1,1,2,2,3,3,4};
+        //collection.removeDuplicates(nums);
+        System.out.println(collection.removeDuplicates(nums));
 //
 //        int[] arr= {-20,8,-6,-14,0,-19,14,4};
 //        System.out.println(collection.checkIfExist(arr));
 
         // Mountain array
-        int[] arr = {0,3,2,1};
+  //      int[] arr = {0,3,2,1};
 //        int[] arr = {9,8,7,6,5,4,3,2,1,0};
+//        System.out.println(collection.validMountainArray(arr));
 
-        System.out.println(collection.validMountainArray(arr));
+        //  Replace Elements with Greatest Element on Right Side
+        //int[] arr = {17, 18, 5, 4, 6, 1};
+        // System.out.println(Arrays.toString(collection.replaceElements(arr)));
     }
 
 }
