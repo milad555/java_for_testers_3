@@ -166,7 +166,7 @@ public class DVDCollection {
         int index = 1;
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] != nums[i + 1]) {
-                nums[index++] = nums[i+1];
+                nums[index++] = nums[i + 1];
             }
         }
         for (int num : nums) {
@@ -230,4 +230,62 @@ public class DVDCollection {
         }
         return arr;
     }
+
+    //88. Merge Sorted Array
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i = m - 1;
+        int j = n - 1;
+        int k = m+n-1;
+
+        while (i>=0 && j>=0){
+            if(nums1[i]>nums2[j]){
+                nums1[k--]=nums1[i--];
+            }else {
+                nums1[k--]=nums2[j--];
+            }
+        } while (j>=0){
+            nums1[k--]=nums2[j--];
+        }
+
+    }
+
+//27. Remove Element Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+    public int remElem(int[] nums, int val){
+        int left=0;
+        int right = nums.length-1;
+
+        while (left<=right){
+            if(nums[left] == val){
+                nums[left]=nums[right];
+                right--;
+            }else {
+                left++;
+            }
+        }
+        return left;
+    }
+
+    public int removeDuplicate(int[] nums){
+        int i = 0;
+        for (int j = 1; j < nums.length ; j++) {
+            if(nums[j] != nums[i]){
+                i++;
+                nums[i] = nums[j];
+            }
+        }return i + 1;
+    }
+
 }
+
+/*
+class Solution {
+  public int removeDuplicates(int[] nums) {
+        int index = 1;
+        for (int i = 0; i < nums.length-1 ; i++) {
+            if(nums[i] != nums[i+1]){
+             nums[index++]= nums[i+1];
+            }
+        }
+        return index;
+    }
+ */

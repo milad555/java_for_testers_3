@@ -57,15 +57,15 @@ public class Main {
 
         //Merge sorted array
 
-       // int[] nums1 = {1,2,3,0,0,0};
-//        int[] nums2 = {2,5,6};
-//        int m = 3;
-//        int n = 3;
+        int[] nums1 = {1,2,3,0,0,0};
+        int[] nums2 = {2,5,6};
+        int m = 3;
+        int n = 3;
 //        int[] nums1 = {0};
 //        int[] nums2 = {1};
 //        int m = 0;
 //        int n = 1;
-      //  System.out.println(Arrays.toString(collection.mergeSortedArray(nums1,nums2,m,n)));
+        System.out.println(Arrays.toString(collection.mergeSortedArray(nums1,nums2,m,n)));
 //
        // System.out.println(Arrays.toString(collection.mkArrayTest()));
 
@@ -82,9 +82,9 @@ public class Main {
 
 
 //        // remove duplicates
-        int[] nums= {0,0,1,1,1,2,2,3,3,4};
+      //  int[] nums= {0,0,1,1,1,2,2,3,3,4};
         //collection.removeDuplicates(nums);
-        System.out.println(collection.removeDuplicates(nums));
+      //  System.out.println(collection.removeDuplicates(nums));
 //
 //        int[] arr= {-20,8,-6,-14,0,-19,14,4};
 //        System.out.println(collection.checkIfExist(arr));
